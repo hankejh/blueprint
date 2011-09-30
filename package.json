@@ -8,6 +8,7 @@
       { "name": "Edward Hotchkiss", "email": "e@ingk.com" }
     ],
   	"dependencies": {
+      "mongoose":"2.2.3",
       "colors":"0.5.1"
   	},
     "licenses" : [ 
