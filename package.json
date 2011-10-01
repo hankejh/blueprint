@@ -1,24 +1,25 @@
-
 {
-  "name": "blueprint",
-  	"description": "Blueprint for success. MVC routing built over node.js/mongodb/mongoose",
-  	"version": "0.0.0",
-  	"author": "Ingk Labs <admin@ingk.com>",
-  	"contributors": [ 
-      { "name": "Edward Hotchkiss", "email": "e@ingk.com" }
-    ],
-  	"dependencies": {
-      "mongoose":"2.2.3",
-      "colors":"0.5.1"
-  	},
-    "licenses" : [ 
-      { 
-        "type" : "MIT",
-        "url" : "http://github.com/isaacs/npm/raw/master/LICENSE"
-      }
-    ],
-  	"main": "./index.js",
-  	"engines": { 
-      "node": ">= 0.4.1 < 0.5.0"
-    }
+	"name": "blueprint",
+	"description": "Blueprint for MVC routing over Node.js & Mongoose",
+  "version": "0.0.0",
+  "author": "Ingk Labs <admin@ingk.com>",
+  "contributors": [ 
+     { "name": "Edward Hotchkiss", "email": "e@ingk.com" }
+  ],
+  "repository" : {
+  	"type": "git",
+    "url": "https://github.com/ingklabs/blueprint"
+ 	},
+  "dependencies": {
+ 		"mongoose":"2.2.3",
+   	"colors":"0.5.1"
+ 	},
+ 	"licenses" : [{ 
+		"type" : "MIT",
+   	"url" : "http://github.com/isaacs/npm/raw/master/LICENSE"
+ 	}],
+ 	"main": "./index.js",
+  "engines": { 
+  	"node": ">= 0.4.1 < 0.5.0"
+  }
 }
