@@ -1,9 +1,4 @@
-Copyright 2011, Ingk Labs & Edward Hotchkiss.
-Some initial work based on connect 0.0.1
-
 Copyright (c) Copyright 2011, Ingk Labs & Edward Hotchkiss.
-Some initial work based on connect 0.0.1
-https://github.com/senchalabs/connect/tree/0.0.1/lib/connect
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
