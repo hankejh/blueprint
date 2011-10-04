@@ -10,7 +10,7 @@ var http = require("http");
 var blueprint = new require("../");
 
 // basic tests
-vows.describe("Blueprint is a working instance of HTTP.Server").addBatch({
+vows.describe("Blueprint Instantiation Tests").addBatch({
     "When we instantiate blueprint": {
         topic : function () { 
             return blueprint;
