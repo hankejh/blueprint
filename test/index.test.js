@@ -11,13 +11,18 @@ var blueprint = new require("../");
 
 // basic tests
 vows.describe("Blueprint Instantiation Tests").addBatch({
-    "When we instantiate blueprint": {
+    "When we instantiate blueprint" : {
         topic : function () { 
             return blueprint;
         },
         "we get an instance of http.Server()": function (topic) {
             topic.should.be.an.instanceof(http.Server);
         }
+    },
+    "When we .boot blueprint" : {
+    	topic : function() {
+    		
+    	}
     }
 }).export(module);
 
