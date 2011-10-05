@@ -1,6 +1,6 @@
 {
 	"name": "blueprint",
-	"description": "Blueprint for MVC routing over Node.js & Mongoose",
+	"description": "Blueprint for an App. Middleware, & MVC routing over Node.js & Mongoose",
   "version": "0.0.0",
   "author": "Ingk Labs <admin@ingk.com>",
   "contributors": [ 
@@ -21,7 +21,7 @@
   },
  	"licenses" : [{ 
 		"type" : "MIT",
-   	"url" : "http://github.com/isaacs/npm/raw/master/LICENSE"
+   	"url" : "http://github.com/ingklabs/blueprint/LICENSE.md"
  	}],
  	"main": "./index.js",
   "engines": { 
