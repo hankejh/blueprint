@@ -1,6 +1,8 @@
 
 var blueprint = require("../");
 
+blueprint.createServer();
+
 blueprint.get("/", function(request, response) {
   response.send("<h1>hello blueprint</h1>");
 });
@@ -11,3 +13,5 @@ blueprint.get("/data", function(request, response) {
 });
 
 blueprint.boot(8080);
+
+/* EOF*/
