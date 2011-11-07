@@ -8,7 +8,8 @@
 var blueprint = require("blueprint");
 
 var conf = [
-  "domain":"yourdomain.com"
+  "domain":"yourdomain.com",
+  "mongodb":"mongodb://localhost/test"
 ];
 
 blueprint.get("/", function(request, response) {
@@ -19,6 +20,9 @@ blueprint.get("/", function(request, response) {
   });
 });
 
-blueprint.boot();
+// WAIT FOR MONGO.READY
+mongo.connection.on("open", function() {
+  app.boot();
+});
 
 /* EOF */
