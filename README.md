@@ -5,8 +5,6 @@ blueprint
 ```javascript
 var blueprint = require("blueprint");
 
-blueprint.createServer();
-
 blueprint.get("/", function(request, response) {
 	response.send("<h1>hello blueprint</h1>");
 });
