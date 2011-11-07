@@ -12,7 +12,8 @@
  	},
   "dependencies": {
  		"mongoose":"2.2.3",
-   	"colors":"0.5.1"
+   	"colors":"0.5.1",
+    "express":""
  	},
    "devDependencies": {
     "vows":"0.5.11",
