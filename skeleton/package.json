@@ -1,0 +1,17 @@
+{
+  "name":"yourappname",
+  "description":"",
+  "version":"0.0.1",
+  "dependencies":{
+    "blueprint":"",
+    "mongoose":""
+  },
+  "devDependencies":{
+    "vows":"0.5.13",
+    "should":"0.3.2",
+    "request":"2.2.0"
+  },
+  "engines":{ 
+    "node":">= 0.4.11"
+  }
+}
