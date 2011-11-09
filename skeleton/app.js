@@ -1,4 +1,3 @@
-
 /*!
 
   yourappname
@@ -19,7 +18,7 @@ mongo.connect(conf["mongodb"]);
 
 // WAIT FOR MONGO.READY
 mongo.connection.on("open", function() {
-  app.boot();
+  blueprint.boot();
 });
 
 /* EOF */
