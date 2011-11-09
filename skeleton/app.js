@@ -8,16 +8,16 @@ var mongoose = require("mongoose");
 var blueprint = require("blueprint");
 
 // CONFIG
-var conf = [
+var conf = {
   "domain":"yourdomain.com",
-  "mongodb":"mongodb://localhost/test"
-];
+  "mongodb":"mongodb://admin:aPugIsSm^l1@boone.mongohq.com:10033/clientq"
+};
 
 // CONNECT TO MONGO
-mongo.connect(conf["mongodb"]);
+mongoose.connect(conf["mongodb"]);
 
 // WAIT FOR MONGO.READY
-mongo.connection.on("open", function() {
+mongoose.connection.on("open", function() {
   blueprint.boot();
 });
 
