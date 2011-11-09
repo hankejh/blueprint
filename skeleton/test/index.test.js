@@ -5,13 +5,12 @@
 
 */
 
+var http = require("http");
 var vows = require("vows");
 var assert = require("assert");
 var should = require("should");
 var request = require("request");
-var http = require("http");
-
-var blueprint = new require("../");
+var blueprint = new require("blueprint");
 
 vows.describe("Blueprint Instantiation Tests").addBatch({
   "When we instantiate blueprint.createServer" : {
@@ -22,16 +21,15 @@ vows.describe("Blueprint Instantiation Tests").addBatch({
       topic.should.be.an.instanceof(http.Server);
     }
   },
-  "When we .boot blueprint and request /data" : {
+  "When we .boot blueprint and request '/'" : {
     topic : function() {
-      blueprint.get("/", function(request, response) {
-        response.send("<h1>hello blueprint</h1>");
-      });
       blueprint.boot();
       request("http://localhost:8000/", this.callback);
     },
-    "we should get JSON back with a message of 'hello' and no error"  : function(error, response, body) {
+    "we should get back a message with the text, no error and a status code of 200" : function(error, response, body) {
       assert.isNull(error);
+      assert.equal(response.statusCode, 200);
+      assert.equal(typeof(body), "string");
     }
   }
 }).export(module);
