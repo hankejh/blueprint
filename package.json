@@ -27,7 +27,7 @@
  	}],
  	"main":"./lib/blueprint.js",
   "bin":{ 
-    "blueprint":"./bin/blueprint"
+    "blueprint":"./bin/blueprint.js"
   },
   "engines":{ 
   	"node":">= 0.4.11"
