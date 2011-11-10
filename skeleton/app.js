@@ -5,14 +5,12 @@
 
 */
 
+var nconf = require("nconf");
 var mongoose = require("mongoose");
 var blueprint = require("blueprint");
 
-// CONFIG
-var conf = [
-  "domain":"yourdomain.com",
-  "mongodb":"mongodb://localhost/test"
-];
+// LOAD CONFIGURATION
+nconf.use("file", { file: "./config/main.json" });
 
 // CONNECT TO MONGO
 mongo.connect(conf["mongodb"]);
