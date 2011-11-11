@@ -1,11 +1,11 @@
 
 module.exports = {
-  mapping: {
-    "index" : {
+  mapping:{
+    "index":{
       "URL":"/",
       "method":"GET",
       "auth":false  
-    }
+    } 
   },
   index : function(request, response) {
     response.render("index", {

@@ -1,7 +1,7 @@
 {
   "name":"blueprint",
   "description":"Blueprint for an App. Middleware, & MVC routing over Node.js & Mongoose",
-  "version":"0.0.6",
+  "version":"0.0.7",
   "author":"Ingk Labs <admin@ingk.com>",
   "maintainers":[{ 
     "name":"Edward Hotchkiss", "email":"e@ingk.com"
