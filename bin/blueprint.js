@@ -7,7 +7,7 @@ var arguments = process.argv.slice(2);
 
 function generate(name) {
   var source = path.normalize(__dirname + "/../skeleton");
-  var destination = path.normalize(__dirname+"/../"+name);
+  var destination = path.normalize(process.cwd()+"/"+name);
   console.log(source+"\n"+destination);
   wrench.copyDirSyncRecursive(source, destination);
 };
