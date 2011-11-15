@@ -1,25 +1,22 @@
 {
   "name":"blueprint",
   "description":"Blueprint for an App. Middleware, & MVC routing over Node.js & Mongoose",
-  "version":"0.1.0",
+  "version":"0.0.6",
   "author":"Ingk Labs <admin@ingk.com>",
-  "maintainers":[{ 
-    "name":"Edward Hotchkiss", "email":"e@ingk.com"
-  }],
+  "maintainers":[
+    { "name":"Edward Hotchkiss", "email":"e@ingk.com" }
+    { "name":"Max Gfeller", "email":"max.gfeller@gmail.com" }
+  ],
   "repository":{
     "type":"git",
     "url":"https://github.com/ingklabs/blueprint"
   },
   "dependencies":{
-    "connect":"1.7.2",
     "mongoose":"2.3.12",
-    "connect-mongoose":"0.0.2",
-    "colors":"0.5.1",
-    "express":"2.5.0",
     "wrench":"1.3.2",
     "nodemailer":"0.2.3",
     "ejs":"0.4.3",
-    "nconf":"0.4.4"
+    "nconf":""
   },
    "devDependencies":{
     "vows":"0.5.11",
