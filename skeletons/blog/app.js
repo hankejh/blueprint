@@ -1,22 +1,22 @@
 
 /*!
 
-  yourappname
+  blog
 
 */
 
-// LOAD CONFIGURATION
+// load configuration and use
 var nconf = require("nconf");
 nconf.use("file", { file: "./config/main.json" });
 
-// SETUP BLUEPRINT W/ MONGOOSE
+// setup blueprint & mongoose
 var mongoose = require("mongoose");
 var blueprint = require("blueprint");
 
-// CONNECT TO MONGO
+// connect to mongodb via mongoose
 mongoose.connect(nconf.get("mongodb"));
 
-// WAIT FOR MONGO.READY
+// wait for mongodb state to be ready, then boot
 mongoose.connection.on("open", function() {
   blueprint.boot();
 });
