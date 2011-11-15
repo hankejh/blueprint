@@ -11,7 +11,7 @@ module.exports = {
     Post.find({}, function(error, posts) {
       response.render("index", {
         locals : {
-          title : "blog",
+          title : "blueprint.blog",
           posts : posts
         }
       });

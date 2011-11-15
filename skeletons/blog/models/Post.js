@@ -34,15 +34,28 @@ Post.find({}, function(error, posts) {
 });
 
 var entry1 = new Post({
-  title   : "<h1>Blogging on Blueprint</h1>",
+  title   : "<h1>blogging on blueprint</h1>",
   content : "<p>This is a skeleton install of a blog using blueprint. We use skeletons as demos then setup is as easy as `blueprint myappname`.</p>"
+});
+
+var entry2 = new Post({
+  title   : "<h1>overview</h1>",
+  content : "<p>Although a blog isn't the obvious (or best) use case for NodeJS, it is something that is extremely useful. If you want to run your entire stack with NodeJS, it's trivial to have your blog do likewise.</p>"
 });
 
 entry1.save(function(error, entry) {
   if (error) {
     throw new Error(error);
   } else {
-    console.log("Post.entry1 saved");
+    console.log("Post.entry2 saved");
+  }
+});
+
+entry2.save(function(error, entry) {
+  if (error) {
+    throw new Error(error);
+  } else {
+    console.log("Post.entry2 saved");
   }
 });
 

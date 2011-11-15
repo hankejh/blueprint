@@ -1,7 +1,9 @@
 
 <div id="posts">
   <% posts.forEach(function(post) { %>
-    <%- post.title %>
-    <%- post.content %>
+    <div class="post">
+      <%- post.title %>
+      <%- post.content %>
+    </div>
   <% }); %>
 </div>
