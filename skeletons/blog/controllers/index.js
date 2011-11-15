@@ -8,10 +8,13 @@ module.exports = {
     } 
   },
   index : function(request, response) {
-    response.render("index", {
-      locals : {
-        title : "yourappname"
-      }
+    Post.find({}, function(error, posts) {
+      response.render("index", {
+        locals : {
+          title : "blueprint.blog",
+          posts : posts
+        }
+      });
     });
   }
 };

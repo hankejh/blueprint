@@ -1,6 +1,6 @@
 {
-  "name":"yourappname",
-  "description":"",
+  "name":"blog",
+  "description":"blog using blueprint",
   "version":"0.0.1",
   "dependencies":{
     "blueprint":"0.0.6",

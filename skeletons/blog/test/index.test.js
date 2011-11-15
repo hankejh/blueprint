@@ -11,7 +11,8 @@ var vows = require("vows");
 var assert = require("assert");
 var should = require("should");
 var request = require("request");
-var blueprint = require("blueprint");
+//var blueprint = require("blueprint");
+var blueprint = require("../../../lib/blueprint.js");
 
 vows.describe("blueprint instantiation tests").addBatch({
   "when we instantiate blueprint.createServer" : {
