@@ -3,7 +3,7 @@
   "description":"blog using blueprint",
   "version":"0.0.1",
   "dependencies":{
-    "blueprint":"0.0.6",
+    "blueprint":"",
     "mongoose":"2.3.12",
     "nconf":"0.4.4"
   },
