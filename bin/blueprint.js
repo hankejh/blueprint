@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-require("colors");
 var path = require("path");
 var wrench = require("wrench");
 var arguments = process.argv.slice(2);
@@ -14,7 +13,7 @@ function generate(name) {
 
 switch(arguments[0]) {
   case "--help":
-    console.log("USAGE: blueprint <yourappname>".magenta);
+    console.log("USAGE: blueprint <yourappname>");
     break;
   default:
     generate(arguments[0]);
