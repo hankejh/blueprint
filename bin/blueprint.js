@@ -5,7 +5,7 @@ var wrench = require("wrench");
 var arguments = process.argv.slice(2);
 
 function generate(name) {
-  var source = path.normalize(__dirname + "/../skeleton/blog");
+  var source = path.normalize(__dirname + "/../skeletons/blog");
   var destination = path.normalize(process.cwd()+"/"+name);
   console.log(source+"\n"+destination);
   wrench.copyDirSyncRecursive(source, destination);
