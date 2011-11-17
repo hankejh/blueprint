@@ -1,9 +1,9 @@
 {
   "name":"blog",
   "description":"blog using blueprint",
-  "version":"0.0.3",
+  "version":"0.0.4",
   "dependencies":{
-    "blueprint":"",
+    "blueprint":"0.1.0",
     "mongoose":"2.3.12",
     "nconf":"0.4.4"
   },
