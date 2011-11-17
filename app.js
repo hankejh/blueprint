@@ -2,6 +2,7 @@
 /*!
 
   blog
+  https://github.com/ingklabs/blueprint/tree/blog
 
 */
 
