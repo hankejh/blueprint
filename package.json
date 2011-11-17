@@ -1,7 +1,7 @@
 {
   "name":"blog",
   "description":"blog using blueprint",
-  "version":"0.0.2",
+  "version":"0.0.3",
   "dependencies":{
     "blueprint":"",
     "mongoose":"2.3.12",
