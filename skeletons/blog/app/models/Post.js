@@ -10,21 +10,19 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
 var post_schema = {
-  id          : { type : ObjectId },
-  title       : { type : String },
-  content     : { type : String },
-  created_at  : { type : Date, default : Date.now }
+  id            : { type : ObjectId },
+  title         : { type : String },
+  content       : { type : String },
+  created_at    : { type : Date, default : Date.now },
+  date_updated  : { type: Date } 
 };
 
 var PostSchema = new Schema(post_schema);
 var Post = mongoose.model("Post", PostSchema);
 
-/*
-
-  For testing,
-  Remove all old Post docs
-
-*/
+Post.getLatestPosts = function(callback){
+  return this.find().sort("_id", "descending").limit(15).find({}, callback);
+};
 
 Post.find({}, function(error, posts) {
   posts.forEach(function(post) {
