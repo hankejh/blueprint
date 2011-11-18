@@ -1,7 +1,18 @@
 
 blueprint
 =========
-  
+
+### Motivation
+
+  NodeJS is awesome. However; there are not a lot of good resources to get you rolling FAST.
+  So I wanted to write a lightweight blueprint for a startup. There are certain requirements 
+  that all startups / web based apps have:
+
+  * middleware
+  * security: authentication and authorization
+  * /public, we all have assets
+  * an easy (read MVC) way to organize and manage our app
+
 ### Setup & Usage
 
 ```bash
@@ -12,7 +23,7 @@ $ npm install
 $ node app.js
 ```
 
-### This is the layout of a blueprint app
+### This is the layout of a blueprint's app.js file
 
 ```
 -- app.js
