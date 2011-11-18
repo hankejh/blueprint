@@ -69,15 +69,16 @@ mongoose.connection.on("open", function() {
 /* EOF */
 ```
 
-### The big difference, is that we're autoloading all of our /models, mapping our /controllers to routes, and setting up our /views
+### The big difference, is that we're autoloading all of our /models, mapping our /controllers to routes with authorization require with a simple boolean flag, and setting up our /views
 
   Here's an example controller:
 
 ```javascript
 
-/*
 
-  Index
+/*
+  
+  Blog
 
 */
 
@@ -87,7 +88,12 @@ module.exports = {
       "URL":"/",
       "method":"GET",
       "auth":false  
-    } 
+    },
+    "posts":{
+      "URL":"/posts",
+      "method":"GET",
+      "auth":false
+    }
   },
   index : function(request, response) {
     Post.getLatestPosts(function(error, posts) {
@@ -98,6 +104,15 @@ module.exports = {
           posts : posts
         }
       });
+    });
+  },
+  posts : function (request, response) {
+    Post.find().sort("date_updated", "descending").find({}, function(error, posts) {
+      if (error) {
+        throw new Error(error);
+      } else {
+       response.send(posts); 
+      }
     });
   }
 };
