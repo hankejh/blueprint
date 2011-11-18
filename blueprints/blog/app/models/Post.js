@@ -13,7 +13,7 @@ var post_schema = {
   id            : { type : ObjectId },
   title         : { type : String },
   content       : { type : String },
-  date_updated  : { type: Date },
+  date_updated  : { type : Date },
   comment_count : { type : Number, default : 0 },
   created_at    : { type : Date, default : Date.now }
 };

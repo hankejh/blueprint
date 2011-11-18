@@ -5,6 +5,15 @@
 
 */
 
+function niceify(mongoDate) {
+  var date = new Date(mongoDate);
+  var day = date.getDate();
+  var month = date.getMonth() + 1;
+  var year = date.getFullYear();
+  var niceDate = month+"."+day+"."+year;
+  return niceDate;
+};
+
 module.exports = {
   mapping:{
     "index":{
@@ -19,7 +28,17 @@ module.exports = {
     }
   },
   index : function(request, response) {
-    Post.getLatestPosts(function(error, posts) {
+    Post.getLatestPosts(function(error, results) {
+      var posts = [];
+      results.forEach(function(post) {
+        var edited = {
+          title : post.title,
+          content : post.content,
+          created_at : niceify(post.created_at),
+          comment_count : post.comment_count
+        };
+        posts.push(edited);
+      });
       response.render("index", {
         locals : {
           title : "blueprint",
