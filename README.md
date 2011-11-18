@@ -14,6 +14,7 @@ $ node app.js
 
 ### This is the layout of a blueprint app
 
+```
 -- app.js
 -- package.json
   --- /config/
@@ -26,6 +27,7 @@ $ node app.js
             -------- some-other-mongoose-model.js
   --- /views/
             -------- index.ejs (we use ejs for rendering views)
+```
 
 ### Here is a basic blueprint app, looks a lot like express, right?
 
