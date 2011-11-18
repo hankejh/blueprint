@@ -13,7 +13,7 @@ blueprint
 	* /public, we all have assets
 	* an easy (read MVC) way to organize and manage our app
 
-### Inspirations: Monk (ruby), Sinatra, Express, CodeIgniter
+### Inspirations: Monk (ruby), Sinatra, Rails
 
 ### Setup & Usage
 
@@ -77,10 +77,9 @@ mongoose.connection.on("open", function() {
 
 ```javascript
 
-
 /*
 	
-	Blog
+	blog
 
 */
 
