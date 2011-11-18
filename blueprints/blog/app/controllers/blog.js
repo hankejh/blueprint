@@ -1,7 +1,10 @@
 
 /*
   
-  Blog
+  blog
+  ----
+  /
+  /posts/
 
 */
 

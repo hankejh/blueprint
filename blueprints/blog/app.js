@@ -11,6 +11,7 @@ var nconf = require("nconf");
 var mongoose = require("mongoose");
 var blueprint = require("blueprint");
 
+// http.createServer()
 blueprint.createServer();
 
 // load and use config file
@@ -22,6 +23,11 @@ mongoose.connect(nconf.get("mongodb"));
 // listen for a mongodb error
 mongoose.connection.on("error", function(error) {
   throw new Error(error);
+});
+
+// notify on uncaughtException
+process.on("uncaughtException", function(error) {
+  console.error(error);
 });
 
 // wait for mongodb state to be ready, then boot
