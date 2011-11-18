@@ -9,7 +9,7 @@
 // load dependencies
 var nconf = require("nconf");
 var mongoose = require("mongoose");
-var blueprint = require("../../lib/blueprint");
+var blueprint = require("blueprint");
 
 blueprint.createServer();
 
