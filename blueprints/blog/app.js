@@ -25,11 +25,6 @@ mongoose.connection.on("error", function(error) {
   throw new Error(error);
 });
 
-// notify on uncaughtException
-process.on("uncaughtException", function(error) {
-  console.error(error);
-});
-
 // wait for mongodb state to be ready, then boot
 mongoose.connection.on("open", function() {
   blueprint.boot();

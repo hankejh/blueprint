@@ -12,17 +12,12 @@
     <div id="header">
       <h1><a href="/">blueprint</a> / this is a blog</h1>
     </div>
-    <div id="posts">
-      <% posts.forEach(function(post) { %>
-        <div class="post">
-          <h1><%- post.title %></h1>
-          <p class="meta"><%- post.created_at %> | <%- post.comment_count %> comments</p>
-          <%- post.content %>
-        </div>
-      <% }); %>
-    </div>
-    <div id="footer">
-      <p><a href="/admin/login/" title="login">login</a></p>
+    <div id="login">
+      <form id="process" action="/login" method="post">
+        <p><input type="text" name="email" id="email" placeholder="email address…" /></p>
+        <p><input type="password" name="password" id="password" placeholder="password…" /></p>
+        <p class="right"><input type="submit" class="submit" value="Login" /></p>
+      </form>
     </div>
   </div>
 </body>

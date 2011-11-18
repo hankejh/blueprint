@@ -3,21 +3,29 @@
   
   install
   -------
-  /install/
+  GET /admin/install/
+  GET /admin/uninstall
+  GET /admin/login/
+  POST /admin/login/
 
 */
 
 module.exports = {
   mapping:{
     "install":{
-      "URL":"/install",
+      "URL":"/admin/install",
       "method":"GET",
-      "auth":false  
+      "auth":true  
     },
     "uninstall":{
-      "URL":"/uninstall",
+      "URL":"/admin/uninstall",
       "method":"GET",
-      "auth":false  
+      "auth":true  
+    },
+    "login":{
+      "URL":"/admin/login",
+      "method":"GET",
+      "auth":false
     }
   },
   install : function(request, response) {
@@ -48,5 +56,10 @@ module.exports = {
       });
     });
     response.redirect("/");
+  },
+  login : function(request, response) {
+    response.render("login", {});
   }
 }
+
+/* EOF */
