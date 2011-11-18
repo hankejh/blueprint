@@ -11,6 +11,22 @@ $ cd yournewapp
 $ npm install
 $ node app.js
 ```
+
+### This is the layout of a blueprint app
+
+-- app.js
+-- package.json
+  `--- /config/
+            `-------- main.json (mongodb string)
+  `--- /controllers/
+            `-------- some-route.js
+            `-------- some-other-route.js
+  `--- /models/
+            `-------- some-mongoose-model.js
+            `-------- some-other-mongoose-model.js
+  `--- /views/
+            `-------- index.ejs (we use ejs for rendering views)
+
 ### Here is a basic blueprint app, looks a lot like express, right?
 
 ```javascript
@@ -41,3 +57,9 @@ mongoose.connection.on("open", function() {
 ```
 
 ### The big difference, is that we're autoloading all of our /models, mapping our /controllers to routes, and setting up our /views
+
+  Here's an example controller:
+
+```javascript
+
+```
