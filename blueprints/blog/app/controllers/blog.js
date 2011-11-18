@@ -22,7 +22,6 @@ module.exports = {
     Post.getLatestPosts(function(error, posts) {
       response.render("index", {
         locals : {
-          layout : true,
           title : "blueprint",
           posts : posts
         }
