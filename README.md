@@ -31,15 +31,15 @@ $ node app.js
 -- app.js
 -- package.json
 	--- /config/
-						-------- main.json (mongodb string)
+		-------- main.json (mongodb string)
 	--- /controllers/
-						-------- some-route.js
-						-------- some-other-route.js
+		-------- some-route.js
+		-------- some-other-route.js
 	--- /models/
-						-------- some-mongoose-model.js
-						-------- some-other-mongoose-model.js
+		-------- some-mongoose-model.js
+		-------- some-other-mongoose-model.js
 	--- /views/
-						-------- index.ejs (we use ejs for rendering views)
+		-------- index.ejs (we use ejs for rendering views)
 ```
 
 ### Here is a basic blueprint's app.js file
