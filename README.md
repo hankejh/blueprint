@@ -71,7 +71,7 @@ mongoose.connection.on("open", function() {
 /* EOF */
 ```
 
-### The big difference, is that we're autoloading all of our /models, mapping our /controllers to routes with authorization require with a simple boolean flag, and setting up our /views
+### The big difference, is that we're autoloading all of our /models, mapping our /controllers to routes with authorization with on/off with a simpel bit flip, and setting up our /views
 
   Here's an example controller:
 
