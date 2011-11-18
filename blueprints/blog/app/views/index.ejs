@@ -10,13 +10,13 @@
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href="/"><%= title %></a></h1>
-      <h2>a blog riding on blueprint</h2>
+      <h1><a href="/">blueprint</a> / this is a blog</h1>
     </div>
     <div id="posts">
       <% posts.forEach(function(post) { %>
         <div class="post">
-          <%- post.title %>
+          <h1><%- post.title %></h1>
+          <p class="meta"><%- post.created_at %> | <%- post.comment_count %> comments</p>
           <%- post.content %>
         </div>
       <% }); %>
