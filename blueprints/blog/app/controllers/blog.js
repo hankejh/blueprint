@@ -8,7 +8,7 @@ module.exports = {
     } 
   },
   index : function(request, response) {
-    Post.getLatestPosts(function(posts) {
+    Post.getLatestPosts(function(error, posts) {
       response.render("index", {
         locals : {
           title : "blueprint",
