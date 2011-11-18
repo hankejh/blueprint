@@ -14,8 +14,7 @@
   "dependencies":{
     "mongoose":"2.3.12",
     "wrench":"1.3.2",
-    "nodemailer":"0.2.3",
-    "nconf":"0.4.4"
+    "nodemailer":"0.2.3"
   },
   "licenses":[{ 
     "type":"MIT",

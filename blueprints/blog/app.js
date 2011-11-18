@@ -7,7 +7,11 @@
 */
 
 // load dependencies
-require.paths = require.paths.unshift(__dirname + "/../node_modules");
+var nconf = require("nconf");
+var mongoose = require("mongoose");
+var blueprint = require("../../lib/blueprint");
+
+blueprint.createServer();
 
 // load and use config file
 nconf.use("file", { file: "./config/main.json" });
@@ -16,7 +20,7 @@ nconf.use("file", { file: "./config/main.json" });
 mongoose.connect(nconf.get("mongodb"));
 
 // listen for a mongodb error
-mongo.connection.on("error", function(error) {
+mongoose.connection.on("error", function(error) {
   throw new Error(error);
 });
 
