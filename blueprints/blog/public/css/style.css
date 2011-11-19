@@ -29,6 +29,20 @@ a, a:visited, a:hover {
   text-decoration: none;  
 }
 
+#github {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+}
+
+#github a {
+  text-decoration: none;
+}
+
+#github a img {
+  border: none;
+}
+
 #container {
   width: 600px;
   position: relative;
