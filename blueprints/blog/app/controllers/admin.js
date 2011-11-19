@@ -13,17 +13,17 @@
 module.exports = {
   mapping:{
     "install":{
-      "URL":"/admin/install",
+      "URL":"/admin/install/",
       "method":"GET",
       "auth":true  
     },
     "uninstall":{
-      "URL":"/admin/uninstall",
+      "URL":"/admin/uninstall/",
       "method":"GET",
       "auth":true  
     },
     "login":{
-      "URL":"/admin/login",
+      "URL":"/admin/login/",
       "method":"GET",
       "auth":false
     }
@@ -58,7 +58,11 @@ module.exports = {
     response.redirect("/");
   },
   login : function(request, response) {
-    response.render("login", {});
+    response.render("login", {
+      locals : {
+        title : "admin | login"
+      }
+    });
   }
 }
 
