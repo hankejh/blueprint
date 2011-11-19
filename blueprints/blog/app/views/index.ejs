@@ -20,8 +20,8 @@
     <div id="posts">
       <% posts.forEach(function(post) { %>
         <div class="post">
-          <h1><%- post.title %></h1>
-          <p class="meta"><%- post.created_at %> | <%- post.comment_count %> comments</p>
+          <h1><a href="/<%- post.slug%>/" title="<%- post.title %>"><%- post.title %></a></h1>
+          <p class="meta"><%- post.created_at_nice %> | <%- post.comment_count %> comments</p>
           <%- post.content %>
         </div>
       <% }); %>
