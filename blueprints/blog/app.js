@@ -15,7 +15,7 @@ var blueprint = require("blueprint");
 blueprint.createServer();
 
 // load and use config file
-nconf.use("file", { file: "./config/main.json" });
+//nconf.use("file", { file: "./config/main.json" });
 
 // connect to mongodb via mongoose
 mongoose.connect(nconf.get("mongodb"));
