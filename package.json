@@ -1,7 +1,7 @@
 {
   "name":"blueprint",
   "description":"Blueprint for a Startup. Middleware, & MVC routing over Node.js & Mongoose",
-  "version":"0.3.1",
+  "version":"0.3.2",
   "author":"Ingk Labs <admin@ingk.com>",
   "maintainers":[
     { "name":"Edward Hotchkiss", "email":"e@ingk.com" },
@@ -24,10 +24,7 @@
     "url":"http://github.com/ingklabs/blueprint/LICENSE"
   }],
   "main":"./lib/blueprint.js",
-  "bin":{ 
-    "blueprint":"./bin/blueprint.js"
-  },
   "engines":{ 
-    "node":">= 0.4.11"
+    "node":">= 0.4.12"
   }
 }
