@@ -7,18 +7,17 @@
 */
 
 // load dependencies
-var nconf = require("nconf");
 var mongoose = require("mongoose");
 var blueprint = require("blueprint");
 
 // http.createServer()
 blueprint.createServer();
 
-// load and use config file
-//nconf.use("file", { file: "./config/main.json" });
+// load package.json
+blueprint.conf.use();
 
 // connect to mongodb via mongoose
-mongoose.connect(nconf.get("mongodb"));
+mongoose.connect(blueprint.conf.get("mongodb"));
 
 // listen for a mongodb error
 mongoose.connection.on("error", function(error) {
