@@ -6,7 +6,7 @@ blueprint
 
 	NodeJS is awesome. However; there are not a lot of good resources to get you rolling FAST.
   	So I wanted to write a lightweight blueprint for a startup. There are certain requirements 
-  	that all startups / web based apps have:
+  	that all startups / web based apps have, I'm trying to address/automate them.
 
 ### Inspirations: Monk (ruby), Sinatra, Rails, Express/Connect
 
@@ -21,7 +21,7 @@ $ blueprint init yourappname
 
 	Commands:
    		help             		Display usage information
-      	Inspirations			Initialize a blueprint app
-      	generate [mvc item]		Generate a scaffold
+      	init					Initialize a blueprint app
+      	generate [mvc-item]		Generate a scaffold
       	routes 					Display alls application routes
 
