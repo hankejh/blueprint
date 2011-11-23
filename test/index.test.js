@@ -6,7 +6,6 @@ var request = require("request");
 
 var blueprint = require("../lib/blueprint");
 
-// VOWS!
 vows.describe("General Module Tests").addBatch({
   "when requiring blueprint":{
     topic:function(){ 
@@ -28,6 +27,7 @@ vows.describe("General Module Tests").addBatch({
     "we should be able to make a request and get back text/html, a 200 response code":function(error, response, body){
       assert.equal(error, null);
       assert.equal(response.statusCode, 200);
+      assert.equal(response.headers["content-type"], "application/json");
     }
   },
   "when we serve up a non existing route":{
