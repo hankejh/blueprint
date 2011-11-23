@@ -1,0 +1,15 @@
+{
+  "name":"blog",
+  "description":"blog using blueprint",
+  "version":"0.0.3",
+  "dependencies":{
+    "blueprint":"0.3.3",
+    "mongoose":"2.3.12"
+  },
+  "engines":{ 
+    "node":">= 0.4.11"
+  },
+  "blueprint":{
+    "mongodb":"mongodb://localhost/test"
+  }
+}
