@@ -29,6 +29,14 @@ vows.describe("General Module Tests").addBatch({
       assert.equal(error, null);
       assert.equal(response.statusCode, 200);
     }
+  },
+  "when we serve up a non existing route":{
+    topic:function(){
+      request("http://localhost:8000/fake-stuff/", this.callback);
+    },
+    "we should be able to make a request and get back text/html, with a 404 response code":function(error, response, body){
+      assert.equal(response.statusCode, 404);
+    }
   }
 }).export(module);
 
