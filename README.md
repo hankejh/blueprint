@@ -4,9 +4,9 @@ blueprint
 
 ### Motivation
 
-  NodeJS is awesome. However; there are not a lot of good resources to get you rolling FAST.
-  So I wanted to write a lightweight blueprint for a startup. There are certain requirements 
-  that all startups / web based apps have:
+	NodeJS is awesome. However; there are not a lot of good resources to get you rolling FAST.
+  	So I wanted to write a lightweight blueprint for a startup. There are certain requirements 
+  	that all startups / web based apps have:
 
 ### Inspirations: Monk (ruby), Sinatra, Rails, Express/Connect
 
@@ -17,7 +17,7 @@ $ sudo npm install blueprint -g
 $ blueprint init yourappname
 ```
 
-### Blueprint CLI
+### blueprint CLI (blueprint [my_command])
 
 	Commands:
    		help             		Display usage information
