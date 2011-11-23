@@ -12,8 +12,8 @@ vows.describe("General Module Tests").addBatch({
     topic:function(){ 
       return blueprint;
     },
-    "blueprint should be a function":function(topic){
-      topic.should.be.a("function");
+    "blueprint should be an object":function(topic){
+      topic.should.be.a("object");
     }
   },
   "when creating an index route with a response":{
