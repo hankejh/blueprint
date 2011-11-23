@@ -7,7 +7,6 @@ var args = process.argv.slice(2);
 var command = args.shift();
 
 if (command === undefined) {
-
   return false;
 };
 
