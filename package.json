@@ -1,7 +1,7 @@
 {
   "name":"blueprint",
   "description":"Blueprint for a Startup. Middleware, & MVC routing over Node.js & Mongoose",
-  "version":"0.3.2",
+  "version":"0.3.2-1",
   "author":"Ingk Labs <admin@ingk.com>",
   "maintainers":[
     { "name":"Edward Hotchkiss", "email":"e@ingk.com" },
@@ -18,6 +18,14 @@
     "mime":"1.2.4",
     "qs":"0.3.2",
     "colors":"0.5.1"
+  },
+  "devDependencies":{
+    "vows":"0.5.13",
+    "should":"0.3.2",
+    "request":""
+  },
+  "scripts": {
+    "test": "vows test/*.test.js --spec"
   },
   "licenses":[{ 
     "type":"MIT",

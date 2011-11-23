@@ -1,0 +1,35 @@
+
+var vows = require("vows");
+var assert = require("assert");
+var should = require("should");
+var request = require("request");
+
+var blueprint = require("../lib/blueprint");
+
+// VOWS!
+vows.describe("General Module Tests").addBatch({
+  "when requiring blueprint":{
+    topic:function(){ 
+      return blueprint;
+    },
+    "blueprint should be a function":function(topic){
+      topic.should.be.a("function");
+    }
+  },
+  "when creating an index route with a response":{
+    topic:function(){
+      var app = blueprint.createServer();
+      app.get("/", function(request, response) {
+        response.send({message:"don't taze me bro!"});
+      });
+      app.listen(8000);
+      request("http://localhost:8000/", this.callback);
+    },
+    "we should be able to make a request and get back text/html, a 200 response code":function(error, response, body){
+      assert.equal(error, null);
+      assert.equal(response.statusCode, 200);
+    }
+  }
+}).export(module);
+
+/* EOF */
