@@ -23,9 +23,13 @@ blueprint.load("controllers");
 // connect to mongodb via mongoose
 mongoose.connect(blueprint.conf.get("mongodb"));
 
-// listen for a mongodb error
+// mongoose listeners
 mongoose.connection.on("error", function(error) {
   throw new Error(error);
+});
+
+mongoose.connection.on("open", function() {
+  process.emit("mongoose::ready");
 });
 
 // setup a base route aside from /controllers
@@ -33,9 +37,7 @@ app.get("/", false, function(request, response) {
   response.send("don't taze me bro!");
 });
 
-// wait for mongodb state to be ready, then boot
-mongoose.connection.on("open", function() {
-  app.listen(8000);
-});
+// http.Server.listen()
+app.listen(8000);
 
 /* EOF */

@@ -11,7 +11,6 @@ vows.describe("Template Tests").addBatch({
   "when spawning a child process for /templates/app.js":{
     topic:function(){
       var dir = process.cwd() + "/templates/";
-      console.log(dir);
       var child = spawn("node", ["app.js"], { cwd : dir });
       child.stdout.on('data', function (data) {
         console.log('stdout: ' + data);
