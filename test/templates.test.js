@@ -7,23 +7,17 @@ var request = require("request");
 var blueprint = require("../lib/blueprint");
 
 vows.describe("Template Tests").addBatch({
-  "when requiring blueprint.scaffold":{
+  "when spawning a child process for /templates/app.js":{
     topic:function(){ 
-      return blueprint.scaffold;
+      var app = blueprint.createServer();
+      app.get("/", false, function(request, response) {
+        response.send("don't taze me bro!");
+      })
+      app.listen(8001);
+      request("http://localhost:8001/", this.callback);
     },
-    "blueprint.scaffold should be a function":function(topic){
-      topic.should.be.a("function");
-    }
-  },
-  "when setting up models and controllers":{
-    topic:function(){
-      blueprint.load("models", "../templates/models/");
-      blueprint.load("controllers", "../templates/controllers/");
-      // return something?
-      return true;
-    },
-    "we should no errors":function(topic){
-      assert.equal(topic, true);
+    "blueprint.scaffold should be a function":function(error, response, body){
+      assert.equal(error, null);
     }
   }
 }).export(module);
