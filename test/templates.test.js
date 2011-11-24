@@ -14,17 +14,6 @@ vows.describe("Template Tests").addBatch({
     "blueprint.scaffold should be a function":function(topic){
       topic.should.be.a("function");
     }
-  },
-  "when setting up models and controllers":{
-    topic:function(){
-      blueprint.load("models", "../templates/models/");
-      blueprint.load("controllers", "../templates/controllers/");
-      // return something?
-      return true;
-    },
-    "we should no errors":function(topic){
-      assert.equal(topic, true);
-    }
   }
 }).export(module);
 
