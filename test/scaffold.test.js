@@ -6,7 +6,7 @@ var request = require("request");
 
 var blueprint = require("../lib/blueprint");
 
-vows.describe("Template Tests").addBatch({
+vows.describe("Scaffold Tests").addBatch({
   "when requiring blueprint.scaffold":{
     topic:function(){ 
       return blueprint.scaffold;
