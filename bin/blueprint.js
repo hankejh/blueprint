@@ -12,11 +12,22 @@ if (command === undefined) {
 };
 
 switch(command) {
+  case "h":
+    scaffold.usage();
   case "help":
     scaffold.usage();
     break
   case "--help":
     scaffold.usage();
+    break;
+  case "i":
+    scaffold.init(args[0]);
+    break;
+  case "init":
+    scaffold.init(args[0]);
+    break;
+  case "--init":
+    scaffold.init(args[0]);
     break;
   default:
     scaffold.usage();
