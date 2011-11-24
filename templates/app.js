@@ -28,10 +28,6 @@ mongoose.connection.on("error", function(error) {
   throw new Error(error);
 });
 
-mongoose.connection.on("open", function() {
-  app.listen(8000);
-});
-
 // setup a base route aside from /controllers
 app.get("/", false, function(request, response) {
   response.send("don't taze me bro!");
