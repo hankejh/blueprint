@@ -12,6 +12,8 @@ if (command === undefined) {
 };
 
 switch(command) {
+  case "h":
+    scaffold.usage();
   case "help":
     scaffold.usage();
     break
