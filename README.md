@@ -1,8 +1,9 @@
 
-blueprint
-=========
+# blueprint
 
-### Motivation
+[![Build Status](https://secure.travis-ci.org/edwardhotchkiss/blueprint.png)](http://travis-ci.org/edwardhotchkiss/blueprint)
+
+## Motivation
 
 	NodeJS is awesome. However; there are not a lot of good resources to get you rolling FAST.
   	So I wanted to write a lightweight blueprint for a startup. There are certain requirements 
