@@ -14,6 +14,18 @@ vows.describe("Template Tests").addBatch({
     "blueprint should be a function":function(topic){
       topic.should.be.a("function");
     }
+  },
+  "when setting up models and controllers":{
+    topic:function(){
+      var app = blueprint.createServer();
+      blueprint.load("models");
+      blueprint.load("controllers");
+      // return something?
+      return true
+    },
+    "we should no errors":function(topic){
+      assert.equal(topic, true);
+    }
   }
 }).export(module);
 
