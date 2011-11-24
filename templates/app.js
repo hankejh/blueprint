@@ -16,6 +16,10 @@ var app = blueprint.createServer();
 // load package.json
 blueprint.conf.use();
 
+// load|require /models and /controllers
+blueprint.load("models");
+blueprint.load("controllers");
+
 // connect to mongodb via mongoose
 mongoose.connect(blueprint.conf.get("mongodb"));
 

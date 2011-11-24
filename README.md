@@ -20,9 +20,10 @@ $ blueprint init yourappname
 
 ## blueprint CLI (blueprint [my_command])
 
-	Commands:
-   		help             			Display usage information
-      	init						Initialize a blueprint app
-      	generate [mvc-item]			Generate a scaffold
-      	routes 						Display alls application routes
+	Usage:
+
+   		help             		Display usage information
+      	init					Initialize a blueprint app
+      	generate [mvc-item]		Generate a scaffold
+      	routes 					Display alls application routes
 
