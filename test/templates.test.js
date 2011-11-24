@@ -11,13 +11,12 @@ vows.describe("Template Tests").addBatch({
     topic:function(){ 
       return blueprint.scaffold;
     },
-    "blueprint should be a function":function(topic){
+    "blueprint.scaffold should be a function":function(topic){
       topic.should.be.a("function");
     }
   },
   "when setting up models and controllers":{
     topic:function(){
-      var app = blueprint.createServer();
       blueprint.load("models");
       blueprint.load("controllers");
       // return something?
