@@ -20,11 +20,6 @@ blueprint.conf.use();
 blueprint.load("models");
 blueprint.load("controllers");
 
-// setup a base route aside from /controllers
-app.get("/", false, function(request, response) {
-  response.send("don't taze me bro!");
-});
-
 // connect to mongodb via mongoose
 mongoose.connect(blueprint.conf.get("mongodb"));
 
@@ -36,5 +31,13 @@ mongoose.connection.on("error", function(error) {
 mongoose.connection.on("open", function() {
   app.listen(8000);
 });
+
+// setup a base route aside from /controllers
+app.get("/", false, function(request, response) {
+  response.send("don't taze me bro!");
+});
+
+// http.Server.listen()
+app.listen(8000);
 
 /* EOF */
