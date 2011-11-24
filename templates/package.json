@@ -3,7 +3,7 @@
   "description":"",
   "version":"0.0.0",
   "dependencies":{
-    "blueprint":"",
+    "blueprint":"0.4.0",
     "mongoose":"2.3.12"
   },
   "engines":{ 
