@@ -20,6 +20,15 @@ switch(command) {
   case "--help":
     scaffold.usage();
     break;
+  case "i":
+    scaffold.init(args[0]);
+    break;
+  case "init":
+    scaffold.init(args[0]);
+    break;
+  case "--init":
+    scaffold.init(args[0]);
+    break;
   default:
     scaffold.usage();
     break;
