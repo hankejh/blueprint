@@ -10,6 +10,6 @@
     "node":">= 0.4.11"
   },
   "blueprint":{
-    "mongodb":"mongodb://localhost/test"
+    "mongodb":"mongodb://127.0.0.1/test"
   }
 }
