@@ -18,7 +18,7 @@ vows.describe("General Module Tests").addBatch({
   "when creating an index route with a response":{
     topic:function(){
       var app = blueprint.createServer();
-      app.get("/", function(request, response) {
+      app.get("/", false, function(request, response) {
         response.send({message:"don't taze me bro!"});
       });
       app.listen(8000);
