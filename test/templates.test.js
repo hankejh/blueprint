@@ -17,10 +17,10 @@ vows.describe("Template Tests").addBatch({
   },
   "when setting up models and controllers":{
     topic:function(){
-      blueprint.load("models");
-      blueprint.load("controllers");
+      blueprint.load("models", "../templates/models/");
+      blueprint.load("controllers", "../templates/controllers/");
       // return something?
-      return true
+      return true;
     },
     "we should no errors":function(topic){
       assert.equal(topic, true);
