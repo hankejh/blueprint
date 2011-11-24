@@ -35,6 +35,7 @@ vows.describe("General Module Tests").addBatch({
       request("http://localhost:8000/fake-stuff/", this.callback);
     },
     "we should be able to make a request and get back text/html, with a 404 response code":function(error, response, body){
+      assert.equal(error, null);
       assert.equal(response.statusCode, 404);
     }
   }
