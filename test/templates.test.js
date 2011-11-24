@@ -12,15 +12,6 @@ vows.describe("Template Tests").addBatch({
     topic:function(){
       var dir = process.cwd() + "/templates/";
       var child = spawn("node", ["app.js"], { cwd : dir });
-      child.stdout.on('data', function (data) {
-        console.log('stdout: ' + data);
-      });
-      child.stderr.on('data', function (data) {
-        console.log('stderr: ' + data);
-      });
-      child.on('exit', function (code) {
-        console.log('child process exited with code ' + code);
-      });
       request("http://localhost:8000/", this.callback);
     },
     "blueprint.scaffold should be a function":function(error, response, body){
