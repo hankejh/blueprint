@@ -2,7 +2,7 @@
 /*!
 
   blog
-  https://github.com/ingklabs/blueprinted/
+  https://github.com/ingklabs/blueprint/
 
 */
 
@@ -26,6 +26,11 @@ mongoose.connect(blueprint.conf.get("mongodb"));
 // listen for a mongodb error
 mongoose.connection.on("error", function(error) {
   throw new Error(error);
+});
+
+// setup a base route aside from /controllers
+app.get("/", false, function(request, response) {
+  response.send("don't taze me bro!");
 });
 
 // wait for mongodb state to be ready, then boot
