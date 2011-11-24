@@ -8,7 +8,7 @@
 
 // load dependencies
 var mongoose = require("mongoose");
-var blueprint = require("blueprint");
+var blueprint = require("../lib/blueprint");
 
 // http.createServer()
 var app = blueprint.createServer();
