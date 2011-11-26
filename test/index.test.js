@@ -21,8 +21,8 @@ vows.describe("General Module Tests").addBatch({
       app.get("/", false, function(request, response) {
         response.send({message:"don't taze me bro!"});
       });
-      app.listen(8000);
-      request("http://localhost:8000/", this.callback);
+      app.listen(9000);
+      request("http://localhost:9000/", this.callback);
     },
     "we should be able to make a request and get back text/html, a 200 response code":function(error, response, body){
       assert.equal(error, null);
@@ -32,7 +32,7 @@ vows.describe("General Module Tests").addBatch({
   },
   "when we serve up a non existing route":{
     topic:function(){
-      request("http://localhost:8000/fake-stuff/", this.callback);
+      request("http://localhost:9000/fake-stuff/", this.callback);
     },
     "we should be able to make a request and get back text/html, with a 404 response code":function(error, response, body){
       assert.equal(error, null);
