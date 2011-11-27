@@ -16,7 +16,12 @@ var app = blueprint.createServer();
 // load package.json
 blueprint.conf.use();
 
-// load|require /models and /controllers
+/*
+  totally optional
+  load|require /models
+  load|require /controllers
+*/
+
 blueprint.load("models");
 blueprint.load("controllers");
 
@@ -26,11 +31,6 @@ mongoose.connect(blueprint.conf.get("mongodb"));
 // mongoose listeners
 mongoose.connection.on("error", function(error) {
   throw new Error(error);
-});
-
-// setup a base route aside from /controllers
-app.get("/", false, function(request, response) {
-  response.send("don't taze me bro!");
 });
 
 // http.Server.listen()
