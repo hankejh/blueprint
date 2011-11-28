@@ -22,8 +22,8 @@ blueprint.conf.use();
   load|require /controllers
 */
 
-blueprint.load("models");
-blueprint.load("controllers");
+blueprint.load("models", "/app/models/");
+blueprint.load("controllers", "/app/controllers/", app);
 
 // connect to mongodb via mongoose
 mongoose.connect(blueprint.conf.get("mongodb"));
