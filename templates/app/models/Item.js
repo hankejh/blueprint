@@ -18,6 +18,34 @@ var ItemSchema = new Schema({
 
 var Item = mongoose.model("Item", ItemSchema);
 
+/*
+  Setup a small mongodb doc
+*/
+
+/*Item.find({}, function(error, items) {
+  if (error) {
+    console.error(error);
+  } else {
+    items.forEach(function(item) {
+      item.remove();
+    });
+  };
+});
+
+var itemA = new Item({
+  title : "Item A",
+  content : "This is item A's content!"
+});
+
+var itemB = new Item({
+  title : "Item B",
+  content : "This is item B's content, excited yet?"
+});
+
+itemA.save();
+itemB.save();
+*/
+
 module.exports = Item;
 
 /* EOF */
